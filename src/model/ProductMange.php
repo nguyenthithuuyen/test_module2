@@ -72,7 +72,7 @@ class ProductMange
         $data = $statement->fetchAll();
         $arr = [];
         foreach ($data as $item){
-            $product = new Product($item['name'],$item['category'],$item['price'],$item['number'],$item['date'],$item['description']);
+            $product = new Product($item['productName'],$item['productLine'],$item['price'],$item['amount'],$item['creat_at'],$item['description']);
             $product->setId($item['id']);
             array_push($arr,$product);
         }
